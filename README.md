@@ -101,7 +101,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 - 存放在cameraCalib.py同一级目录下
 
 <p>
-   <img width = "400" src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/e3756c9d425a9f0b674b9afa052957217b0bddf9/image/picture.jpg"></a>
+<img width = "400" src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/e3756c9d425a9f0b674b9afa052957217b0bddf9/image/picture.jpg"></a>
 </p>
 
 - 执行代码
