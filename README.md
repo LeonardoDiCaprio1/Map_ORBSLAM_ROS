@@ -37,7 +37,7 @@ sudo apt install libpng-dev libopenexr-dev libtiff-dev libwebp-dev
 pkg-config --modversion opencv4
 ```
 ### 4.安装boost库
-- 链接：https://www.boost.org/users/download/
+- [链接](https://www.boost.org/users/download/)
 ```
 sudo ./bootstrap.sh
 sudo ./b2 install
