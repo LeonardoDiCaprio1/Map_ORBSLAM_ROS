@@ -1,30 +1,32 @@
-import numpy
+import os
 import rosbag
 import cv2
-import os
+import numpy as np
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-from cv_bridge import CvBridgeError
-rgb_path = '/path/to/save/bag/rgb/'
-depth_path = '/path/to/save/bag/depth/'
+
+rgb_path = '/path/to/save/bag/rgb/'  # 存储提取的彩色图像的绝对路径
+depth_path = '/path/to/save/bag/depth/'  # 存储提取的深度图像的绝对路径
 bridge = CvBridge()
+num = 1
+
 with rosbag.Bag('/path/to/image.bag', 'r') as bag:
-	num = 1
-for topic,msg,t in bag.read_messages():
-        
-        if topic == "/camera/depth/image_raw": 
-            cv_image = bridge.imgmsg_to_cv2(msg, '32FC1')
-            cv_image = cv_image * 255 
-            # timestr = "%.8f" %  msg.header.stamp.to_sec() # 时间戳命名
-            # image_name = timestr + '.png'# an extension is necessary
-            image_name = str(num) + '.png'# 编号命名
-            cv2.imwrite(depth_path + image_name, cv_image)  
-            # 实际应用可直接保存为 numpy array
-            # np.save(depth_path + image_name, cv_image)  
-            print(depth_path + image_name)
-        if topic == "/camera/rgb/image_raw": 
-            cv_image = bridge.imgmsg_to_cv2(msg, "bgr8")
-            timestr = "%.8f" %  msg.header.stamp.to_sec()
-            image_name = str(num) + '.png'
-            cv2.imwrite(rgb_path + image_name, cv_image)
-            num += 1
+    for topic, msg, t in bag.read_messages():
+        if topic == "/camera/depth/image_raw":
+            try:
+                cv_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+                cv_image = cv2.normalize(cv_image, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8UC1)
+                image_name = str(num) + '.png'
+                cv2.imwrite(os.path.join(depth_path, image_name), cv_image)
+                print(os.path.join(depth_path, image_name))
+            except CvBridgeError as e:
+                print(e)
+        elif topic == "/camera/rgb/image_raw":
+            try:
+                cv_image = bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+                image_name = str(num) + '.png'
+                cv2.imwrite(os.path.join(rgb_path, image_name), cv_image)
+                print(os.path.join(rgb_path, image_name))
+            except CvBridgeError as e:
+                print(e)
+        num += 1
