@@ -64,6 +64,9 @@ chmod +x *.sh
 ### 7.TUM数据集稠密建图
 ```
 ./run_rgb_mapping.sh
+或者
+source build/devel/setup.bash
+roslaunch orb_slam3 rgbd_mapping_1.launch
 ```
 # 制作TUM数据集
 - 奥比中光bag包录制
