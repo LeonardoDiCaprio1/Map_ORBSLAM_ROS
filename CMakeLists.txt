@@ -61,7 +61,7 @@ MESSAGE("OPENCV VERSION:")
 MESSAGE(${OpenCV_VERSION})
 
 find_package(Eigen3 3.3.7 REQUIRED)
-#include_directories("/home/spurs/installed/include/eigen3")
+# #include_directories("/path/to/eigen3")
 
 find_package(Pangolin REQUIRED)
 find_package(realsense2)
