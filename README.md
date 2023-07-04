@@ -116,7 +116,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 python3 cameraCalib.py
 ```
 - 注：例子Example.yaml在scripts里
-
+[哔哩哔哩](https://www.bilibili.com/video/BV1Qz4y1J7F5/?vd_source=4ec019efa21b93f0dc82653ec970875a)
 # ORB-SLAM3
 
 ### V0.4: Beta version, 21 April 2021
