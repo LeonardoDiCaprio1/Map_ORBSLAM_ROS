@@ -101,6 +101,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
   <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/54a5e06c9cd405a935953f0737fa07ff1be3a81f/image/tum.jpeg"
     alt="Image description" width="600">
 </p>
+
 #### 注：你可以使用其他的深度相机制作TUM数据集，TUM数据集官方给的bag文件除了相机深度话题和彩色话题还有imu和tf话题，故需要特殊的方法制作才能实现稠密建图。
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
