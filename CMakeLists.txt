@@ -168,22 +168,22 @@ ${catkin_LIBRARIES}
 #ros mono 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/ROS)
 
-add_executable(Mono
+add_executable(ros_mono
         Examples/ROS/ros_mono.cc)
-target_link_libraries(Mono 
+target_link_libraries(ros_mono 
 ${PROJECT_NAME}
 )
 
-add_executable(stereo
+add_executable(ros_stereo
         Examples/ROS/ros_stereo.cc)
-target_link_libraries(stereo 
+target_link_libraries(ros_stereo 
 ${PROJECT_NAME}
 )
 
 
-add_executable(rgbd_mapping
+add_executable(ros_rgbd_mapping
         Examples/ROS/ros_rgbd_mapping.cc)
-target_link_libraries(rgbd_mapping 
+target_link_libraries(ros_rgbd_mapping 
 ${PROJECT_NAME}
 )
 
