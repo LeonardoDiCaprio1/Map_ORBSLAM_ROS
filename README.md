@@ -90,9 +90,9 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 ./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM1.yaml /home/zhao/script /home/zhao/script/associate.txt
 ```
 - 效果演示 
-<p>
-<src=“https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/repository/master/image/outcome.png”>
-</p>
+
+[<src=“https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/repository/master/image/outcome.png”>](https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/88921dab8760a99e1041324025d1e4ad3beb40ff/image/outcome.png)
+
 
 #### 注：你可以使用其他的深度相机制作TUM数据集。TUM官方给的是有imu和tf话题，故需要特殊的方法制作才能实现稠密建图
 # 相机内参标定
