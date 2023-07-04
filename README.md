@@ -85,7 +85,17 @@ python3 get_tum.py
 ```
 python3 associate.py rgb.txt depth.txt  > associate.txt
 ```
-#### 注：你可以使用其他的深度相机制作TUM数据集
+- 执行指令例子
+```
+./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM1.yaml /home/zhao/script /home/zhao/script/associate.txt
+```
+- 效果演示
+  
+<p>
+   <img width = "400" src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/e3756c9d425a9f0b674b9afa052957217b0bddf9/image/picture.jpg"></a>
+</p>
+
+#### 注：你可以使用其他的深度相机制作TUM数据集。TUM官方给的是有imu和tf话题，故需要特殊的方法制作才能实现稠密建图
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
