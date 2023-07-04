@@ -5,7 +5,8 @@
  	<node pkg="orb_slam3" type="ros_mono" name="orb_slam3" args="$(find orb_slam3)/Examples/Monocular/KITTI00-02.yaml 
     $(find orb_slam3)/Vocabulary/ORBvoc.txt /path/to/data/kitti_00" output="screen" />
     <!--
-    <node pkg="rosbag" type="play" name="playbag" args="/home/spurs/dataset/rgbd_dataset_freiburg2_large_with_loop.bag" />
+    <node pkg="rosbag" type="play" name="playbag" 
+    args="/path/to/data/rgbd_dataset_freiburg2_large_with_loop.bag" />
     -->
 
 </launch>
