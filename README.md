@@ -92,7 +92,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 - 效果演示
   
 <p>
-   <img width = "1000" src=“https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/129b147d2c0dff62c618914744bf5a0870d95b33/image/outcome.png”></a>
+   <img width = "1000" src=“https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/e3756c9d425a9f0b674b9afa052957217b0bddf9/image/outcome.png”></a>
 </p>
 
 #### 注：你可以使用其他的深度相机制作TUM数据集。TUM官方给的是有imu和tf话题，故需要特殊的方法制作才能实现稠密建图
