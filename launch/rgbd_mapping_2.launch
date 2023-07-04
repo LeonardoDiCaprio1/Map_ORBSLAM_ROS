@@ -1,7 +1,7 @@
 <launch>
     
     <!-- <node pkg="rosbag" type="play" name="playbag" 
-    args="/path/to/ORB_SLAM3_ROS/data/rgbd_desk.bag" /> -->
+    args="/path/to/data/rgbd_desk.bag" /> -->
    
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find orb_slam3)/rviz/rgbd_mapping.rviz" />
     <node pkg="orb_slam3" type="ros_rgbd_mapping" name="orb_slam3" args="$(find orb_slam3)/Examples/RGB-D/TUM2.yaml 
