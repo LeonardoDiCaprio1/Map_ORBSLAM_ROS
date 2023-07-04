@@ -91,7 +91,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 ```
 - 效果演示 
 <p align="center">
-  <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/68c5dfa3543ea34294793b5efb98447eccd5d3ef/image/outcome.png" alt="Image description" width="400">
+  <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/68c5dfa3543ea34294793b5efb98447eccd5d3ef/image/outcome.png" alt="Image description" width="800">
 </p>
 
 
