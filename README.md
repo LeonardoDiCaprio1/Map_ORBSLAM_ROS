@@ -1,4 +1,100 @@
+# 简介
+- 本项目是可以将ORBSLAM稠密建图集成到rviz里。
+- 笔者参考大部分大佬的魔改开源代码最终编译成功。
+# 操作环境
+- Ubuntu 20.04
+- ROS Noetic
+# 额外依赖
+- pcl-1.13
+-  Pangolin-0.6
+- boost-1.79.0
+##### 注：Ubuntu 20.04 ROS Neotic自带opencv-4.2.0
+# 安装依赖
+###  1.安装git，g++，python
+- ORBSLAM3需要C++11和C++0x 编译器
+```
+sudo apt-get install git
+sudo apt install g++
+sudo apt install libpython2.7-dev
+```
+### 2.安装EIGEN库
+```
+sudo apt-get install libeigen3-dev
+```
+- 检查是否安装成功
+```
+cat /usr/include/eigen3/Eigen/src/Core/util/Macros.h
+```
+### 3.安装OpenCV依赖
+```
+sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
+sudo apt install python3-dev python3-numpy
+sudo apt install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+sudo apt install libpng-dev libopenexr-dev libtiff-dev libwebp-dev
+```
+- 检查OpenCV版本号
+```
+pkg-config --modversion opencv4
+```
+### 4.安装boost库
+- 链接：https://www.boost.org/users/download/
+```
+sudo ./bootstrap.sh
+sudo ./b2 install
+```
+### 5.安装realsense2
+- 注册public key
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
+```
+- 添加apt源
+```
+sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
+```
+- 安装
+```
+sudo apt install librealsense2-dkms librealsense2-utils librealsense2-dev
+```
+### 6.安装编译Map_ORBSLAM_ROS
+```
+cd Map_ORBSLAM_ROS
+chmod +x *.sh
+./build.sh
+```
+### 7.TUM数据集稠密建图
+```
+./run_rgb_mapping.sh
+```
+# 制作TUM数据集
+- 奥比中光bag包录制
+```
+rosbag record -O image.bag /camera/rgb/image_raw /camera/depth/image_raw
+```
+- 查看奥比中光订阅话题 
+```
+rosbag info image.bag
+```
+- 使用脚本get_tum.py获取深度图和彩色图并分别得到txt文件
+```
+python3 get_tum.py
+```
+- 使用官方脚本得到associate.txt文件
+```
+python3 associate.py rgb.txt depth.txt  > associate.txt
+```
+#### 注：你可以使用其他的深度相机制作TUM数据集
+# 相机内参标定
+- 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
+- 存放在cameraCalib.py同一级目录下
 
+<p>
+   <img width = "800" src="[image/picture.jpg](https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/e3756c9d425a9f0b674b9afa052957217b0bddf9/image/picture.jpg)"></a>
+</p>
+
+- 执行代码
+```
+python3 cameraCalib.py
+```
 
 # ORB-SLAM3
 
