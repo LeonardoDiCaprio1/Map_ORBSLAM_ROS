@@ -2,6 +2,8 @@
 - 此项目是可以将ORBSLAM稠密建图集成到rviz里。
 - 笔者参考大部分大佬的魔改开源代码最终编译成功。
 - 许多文件需要更改路径，请读者仔细阅览相关代码，如launch文件。
+- 博客链接：http://t.csdn.cn/XDVAx
+
 # 操作环境
 - Ubuntu 20.04
 - ROS Noetic
@@ -128,7 +130,17 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
   <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/83c2e64c7519b0707e8c81b91029df5eb53a60d7/image/PointCloud.png"
     alt="Image description" width="750">
 </p>
+# 安装pcl工具
+- pcd文件默认保存在.ros文件夹里
 
+```
+sudo apt-get install libpcl-dev pcl-tools
+```
+- 查看建图
+
+```
+pcl_viewer vslam.pcd
+```
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
