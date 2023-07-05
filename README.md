@@ -136,13 +136,13 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 ```
 sudo apt-get install libpcl-dev pcl-tools
 ```
-- pcd文件默认保存在.ros文件夹里
+
 - 查看建图
 
 ```
 pcl_viewer vslam.pcd
 ```
-
+#### 注：pcd文件默认保存在.ros文件夹里
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
