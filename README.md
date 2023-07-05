@@ -131,7 +131,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
     alt="Image description" width="750">
 </p>
 
-# 安装pcl工具
+- 安装pcl工具
 
 ```
 sudo apt-get install libpcl-dev pcl-tools
