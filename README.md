@@ -102,7 +102,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
     alt="Image description" width="680">
 </p>
 
-#### 注：你可以使用其他的深度相机制作TUM数据集，TUM官方数据集给的bag文件除了相机深度话题和彩色话题以外还有imu和tf话题，故需要特殊的方法制作才能实现稠密建图。
+#### 注：你可以使用其他的深度相机制作TUM数据集，TUM官方数据集给的bag文件除了相机深度话题和彩色话题以外还有imu和tf话题。
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
