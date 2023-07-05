@@ -103,6 +103,26 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 </p>
 
 #### 注：你可以使用其他的深度相机制作TUM数据集，TUM官方数据集给的bag文件除了相机深度话题和彩色话题以外还有imu和tf话题。
+# 制作TUM数据集-稠密建图
+- 首先在当级目录下创建rgb.txt和depth.txt以及rgb和depth文件夹
+```
+mkdir rgb
+mkdir depth
+touch rgb.txt
+touch depth.txt
+```
+- 运行scripts中的get_TUM.py文件
+```
+python3 get_TUM.py
+```
+- 运行associate.py得到associate.txt文件
+```
+python3 associate.py rgb.txt depth.txt  > associate.txt
+```
+- 使用自己的数据集稠密建图
+```
+./run_rgb_mapping.sh
+```
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
