@@ -132,11 +132,11 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 </p>
 
 # 安装pcl工具
-- pcd文件默认保存在.ros文件夹里
 
 ```
 sudo apt-get install libpcl-dev pcl-tools
 ```
+- pcd文件默认保存在.ros文件夹里
 - 查看建图
 
 ```
