@@ -7,7 +7,7 @@
 - ROS Noetic
 # 额外依赖
 - pcl-1.13
--  Pangolin-0.6
+- Pangolin-0.6
 - boost-1.79.0
 ##### 注：Ubuntu 20.04 ROS Neotic自带opencv-4.2.0
 # 安装依赖
