@@ -125,7 +125,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
 ```
 - 运行样例
 <p align="center">
-  <img [src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/83c2e64c7519b0707e8c81b91029df5eb53a60d7/image/PointCloud.png"
+  <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/83c2e64c7519b0707e8c81b91029df5eb53a60d7/image/PointCloud.png"
     alt="Image description" width="720">
 </p>
 # 相机内参标定
