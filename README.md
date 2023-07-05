@@ -130,6 +130,7 @@ python3 associate.py rgb.txt depth.txt  > associate.txt
   <img src="https://github.com/LeonardoDiCaprio1/Map_ORBSLAM_ROS/blob/83c2e64c7519b0707e8c81b91029df5eb53a60d7/image/PointCloud.png"
     alt="Image description" width="750">
 </p>
+
 # 安装pcl工具
 - pcd文件默认保存在.ros文件夹里
 
@@ -141,6 +142,7 @@ sudo apt-get install libpcl-dev pcl-tools
 ```
 pcl_viewer vslam.pcd
 ```
+
 # 相机内参标定
 - 可以将以下的照片打印在A4纸上，拍摄20张左右的图片
 - 存放在cameraCalib.py同一级目录下
