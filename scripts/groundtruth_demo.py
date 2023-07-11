@@ -13,8 +13,8 @@ bag_file = "/home/zhao/tum/rgbd_dataset_freiburg1_xyz.bag"
 # 相机彩色图像话题
 image_topic = "/camera/rgb/image_color"
 
-# IMU话题
-pose_topic = "/imu"
+# groundtruth话题
+pose_topic = "/pose_topic"
 
 groundtruth_file = "/home/zhao/tum/groundtruth.txt"
 
