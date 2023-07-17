@@ -80,9 +80,9 @@ rosbag record -O image.bag /camera/rgb/image_raw /camera/depth/image_raw
 ```
 rosbag info image.bag
 ```
-- 使用脚本get_tum.py获取深度图和彩色图并分别得到txt文件
+- 使用脚本get_TUM_better.py获取深度图和彩色图并分别得到txt文件
 ```
-python3 get_tum.py
+python3 get_TUM_better.py
 ```
 - 使用官方脚本得到associate.txt文件
 ```
@@ -113,9 +113,9 @@ mkdir depth
 touch rgb.txt
 touch depth.txt
 ```
-- 运行scripts中的get_TUM.py文件
+- 运行scripts中的get_TUM_better.py文件
 ```
-python3 get_TUM.py
+python3 get_TUM_better.py
 ```
 - 运行associate.py得到associate.txt文件
 ```
