@@ -11,7 +11,7 @@
 - pcl-1.13
 - Pangolin-0.6
 - boost-1.79.0
-##### 注：Ubuntu 20.04 ROS Neotic自带opencv-4.2.0
+##### 注：Ubuntu 20.04 ROS Noetic自带OpenCV-4.2.0
 # 安装依赖
 ###  1.安装git，g++，python
 - ORBSLAM3需要C++11和C++0x 编译器
