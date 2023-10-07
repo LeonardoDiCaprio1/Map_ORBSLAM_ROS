@@ -81,6 +81,7 @@ rosbag record -O image.bag /camera/rgb/image_raw /camera/depth/image_raw
 rosbag info image.bag
 ```
 - 使用脚本get_TUM_better.py获取深度图和彩色图并分别得到txt文件
+- 官方TUM数据集bag文件请使用TUM_official.py文件
 ```
 python3 get_TUM_better.py
 ```
