@@ -2,7 +2,7 @@
 - 此项目是可以将ORBSLAM稠密建图集成到rviz里并且可以用自己的数据集稠密建图。
 - 笔者参考大部分大佬的魔改开源代码并添加了一些功能最终编译成功。
 - 许多文件需要更改路径，请读者仔细阅览相关代码，如launch文件夹和scripts文件夹。
-- 博客链接：[http://t.csdn.cn/XDVAx](http://t.csdn.cn/WR71T)
+- 博客链接：https://blog.csdn.net/weixin_64338148/article/details/131556754
 
 # 操作环境
 - Ubuntu 20.04
